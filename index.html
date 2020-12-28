@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Отправка формы в Телеграм для учеников</title>
+
+    <!-- Bootstrap core CSS -->
+
+  </head>
+<?
+?>
+  <body>
+    <div class="container">
+
+      <div class="row">
+      	<div class="mt-5 col-sm-12 display-flex justify-contenet-center">
+          <h2 class="text">Заполниту форму</h2>
+          <form class="mt-5" action="telegram.php" method="POST">
+            <input type="text" class="form-control" name="user_name" id="login" placeholder="Имя:">
+            <br>   
+            <input type="text" class="form-control" name="user_surname" id="lastname" placeholder="Фамилия:">
+            <br>
+            <input type="number" class="form-control" id="nmb" min="9" max="45" name="user_age" id="lastname" placeholder="Лет:">
+            <br>
+            <input type="text" class="form-control" name="user_map" id="name" placeholder="Местонохождения:">
+            <br>
+            <input id="center_ok" type="tel" name="user_phone" placeholder="Телефон номер:" class="form-control" >
+            <br>
+            <input type="email" class="form-control" name="user_email" placeholder="Email:">
+            <br>
+            <input class="btn btn-success" name="submit" type="submit">
+        </form>
+      </div> <!-- .row -->
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script> 
+    <script>
+    $("#center_ok").mask("+999(99) 999-9999");
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
+	
